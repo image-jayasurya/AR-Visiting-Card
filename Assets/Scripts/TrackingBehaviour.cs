@@ -1,8 +1,11 @@
 ﻿using UnityEngine;
 using Vuforia;
 
+//Custom Tracking Behaviour
 public class TrackingBehaviour : MonoBehaviour, ITrackableEventHandler
 {
+    //To make the variable visible on Unity Editor we use SerializeField.
+    //Drag and Drop the VisitingCard Parent Game Object (Not the Image Target)
     [SerializeField]
     GameObject Card;
 
@@ -55,6 +58,7 @@ public class TrackingBehaviour : MonoBehaviour, ITrackableEventHandler
     {
         if (mTrackableBehaviour)
         {
+            //Enables GameObject
             Card.SetActive(true);
         }
     }
@@ -64,6 +68,7 @@ public class TrackingBehaviour : MonoBehaviour, ITrackableEventHandler
     {
         if (mTrackableBehaviour)
         {
+            //Disables GameObject
             Card.SetActive(false);
         }
     }
